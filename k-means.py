@@ -1,3 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+def load_dataset(name):
+    return np.genfromtxt(name, delimiter = ',')
+
+
+def euclidian(a, b):
+    return np.linalg.norm(a-b)
+
+
 def kmeans(k, epsilon=0, distance='euclidian'):
     history_centroids = []
     if distance == 'euclidian':
